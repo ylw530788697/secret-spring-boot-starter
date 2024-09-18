@@ -62,8 +62,8 @@ public class SecretYamlPropertySourceLoader extends AbstractPropertySourceLoader
                     if (value.startsWith("Encrypted:")) {
                         int prefixLength = "Encrypted:".length();
                         String extractedString = value.substring(prefixLength);
-//                        AESUtil.decrypt(extractedString)
-                        String decrypt = KmsSecret.dncrypt(extractedString);
+                        String decrypt = AESUtil.decrypt(extractedString);
+//                        String decrypt = KmsSecret.dncrypt(extractedString);
                         stringObjectMap.put(s, decrypt);
                     }
                 } catch (Exception e) {
