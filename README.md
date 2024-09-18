@@ -1,7 +1,7 @@
 # secret-spring-boot-starter
 配置文件敏感信息加解密
 
-# botstracp.yaml/application.yaml /nacos文件 可以跟进配置的 Encrypted:前缀解密数据
+# bootstrap.yaml/application.yaml /nacos文件 可以跟进配置的 Encrypted:前缀解密数据
 test:
   secret:
     mysql:
